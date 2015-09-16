@@ -1,0 +1,30 @@
+{
+	"name": "Alex",
+	"version": "0.1",
+	"icons": { 
+		"16": "/img/icons/icon_16.png",
+		"48": "/img/icons/icon_48.png",
+		"128": "/img/icons/icon_128.png" 
+	},
+
+	"description": "Catch insensitive, inconsiderate writing",
+
+	"permissions": [
+		"tabs", "<all_urls>"
+	],
+
+	"background": {
+		"scripts": ["js/background.js"],
+		"persistent": false
+	},
+
+	"browser_action": {
+		"default_icon": {
+			"19": "img/icons/icon_19.png",
+			"38": "img/icons/icon_38.png"
+		},
+		"default_title": "Alex"
+	},
+
+	"manifest_version": 2
+}
