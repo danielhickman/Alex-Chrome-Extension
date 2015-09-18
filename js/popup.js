@@ -37,17 +37,20 @@ function onchange() {
 		while (issues.firstChild) {
 			issues.removeChild(issues.firstChild);
 		}
-		for (var i = messages.length - 1; i >= 0; i--) {
-			issue = document.createElement('li');
+		if (messages.length > 0) {
+			for (var i = messages.length - 1; i >= 0; i--) {
+				issue = document.createElement('li');
+				issue.className = 'issue';
+				issue.source = messages[i].toString();
+				issue.innerHTML = decorateMessage(messages[i]);
+				issues.appendChild(issue);
+			};
+		} else {
+			issue = document.createElement('div');
 			issue.className = 'issue';
-			issue.source = messages[i].toString();
-			issue.innerHTML = decorateMessage(messages[i]);
+			issue.innerHTML = "No issues found."
 			issues.appendChild(issue);
-		};
-		// 	if (report.length > 0) {
-		// 		console.log(report);
-		// 	} else {
-		// 		console.log("Your're good!");
+		}
 	}
 }
 
