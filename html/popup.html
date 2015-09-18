@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html style="width: 600px;">
+<head>
+	<title>Alex</title>
+	<style type="text/css">
+	body {
+		font-size: 20px;
+		font-family: 'Neuton', serif;
+		line-height: 1.430;
+		color: #333333;
+		margin: 0;
+	}
+	.input {
+		white-space: pre-wrap;
+	}
+	.issues {
+
+	}
+	.label {
+		background-color: #A9A9A9;
+		color: white;
+		padding: 0.2em 0.25em;
+		border-radius: 0.2em;
+		font-size: 0.7em;
+	}
+	.label.label-nok {
+		background-color: #ce4037;
+	}
+	.label.label-ok {
+		background-color: #29a853;
+	}
+	.footer {
+		height: 56px;
+		background-color: #212121;
+		color: #fff;
+	}
+	</style>
+</head>
+<body>
+	<div class="input" id="input" contenteditable="true">Enter text here or select text on the webpage and press Alex again.</div>
+	<ol id="issues" class="issues"></ol>
+
+	<!-- <div class="footer">Powered By <a href="http://alexjs.com/" target="_blank" title="Alex Website">Alex</a> | Extension by <a title="Daniel Hickman on GitHub" target="_blank" href="https://github.com/danielhickman/">Daniel Hickman</a></div> -->
+
+	<script src="/js/alex.js"></script>
+	<script src="/js/popup.js"></script>
+</body>
+</html>
