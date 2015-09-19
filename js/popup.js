@@ -1,4 +1,6 @@
 var inputEle = document.getElementById("input");
+var noIssuesEle = document.getElementById("no-issues");
+var issuesEle = document.getElementById("issues");
 var selection = "";
 chrome.tabs.executeScript(null, {file: "/js/alex.js"},function() {
 	chrome.tabs.executeScript(null, {file: "/js/content_script.js"},function() {
@@ -6,7 +8,16 @@ chrome.tabs.executeScript(null, {file: "/js/alex.js"},function() {
 			chrome.tabs.sendMessage(tabs[0].id, {message: "open"}, function(response) {
 				selection = response.selection;
 				if (selection.length > 0 ) {
+					// Add Selection to Input
 					inputEle.innerHTML = selection;
+					// Select Input
+					var s = window.getSelection(),
+						r = document.createRange();
+					r.setStart(inputEle, 0);
+					r.setEnd(inputEle, 0);
+					s.removeAllRanges();
+					s.addRange(r);
+					// Run through Alex
 					onchange();
 				} else {
 					// Don't use selection
@@ -38,6 +49,8 @@ function onchange() {
 			issues.removeChild(issues.firstChild);
 		}
 		if (messages.length > 0) {
+			noIssuesEle.style.display = "none";
+			issuesEle.style.display = "block";
 			for (var i = messages.length - 1; i >= 0; i--) {
 				issue = document.createElement('li');
 				issue.className = 'issue';
@@ -46,12 +59,11 @@ function onchange() {
 				issues.appendChild(issue);
 			};
 		} else {
-			issue = document.createElement('div');
-			issue.className = 'issue';
-			issue.innerHTML = "No issues found."
-			issues.appendChild(issue);
+			issuesEle.style.display = "none";
+			noIssuesEle.style.display = "block";
 		}
 	}
 }
 
+onchange();
 inputEle.addEventListener("input", function() {onchange();}, false);
