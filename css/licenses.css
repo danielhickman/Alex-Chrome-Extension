@@ -1,0 +1,61 @@
+html {
+	width: 600px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: rgba(0,0,0,0.87);
+}
+body {
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+	font-size: 1em;
+}
+.main {
+	margin-top: 64px;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+.navtext {
+	font-size: 1.5em;
+	color: #fff;
+	display: inline-block;
+	font-weight: 500;
+}
+.header {
+	font-size: 1.2em;
+	font-weight: 400;
+	color: #8060E5;
+}
+.card-content div, .card-content li {
+	font-size: 1em;
+    line-height: 2em;
+}
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+	height: 56px;
+	line-height: 56px;
+	-webkit-user-select: none;
+	cursor: default;
+}
+#overflow-menu-dropdown {
+	margin-top: 8px;
+}
+.card-action {
+	width: 100%;
+}
+.card-action.right > a {
+	float: right;
+}
+.alex-button {
+	color: #8060E5 !important;
+}
+.alex-button:hover {
+	color: #8060E5 !important;
+}
+.card-meta {
+	font-weight: 300;
+}
+.card-meta > b {
+	font-weight: 400;
+}
+.card > .card-content > .card-title {
+	color: rgba(0,0,0,0.87);
+}

@@ -1,118 +1,38 @@
 <!DOCTYPE html>
-<html style="width: 600px; height:600px;">
+<html>
 <head>
 	<title>Alex</title>
 	<link rel="stylesheet" target="_blank" href="/css/materialize.css"></link>
-	<style type="text/css">
-	body {
-		margin: 0;
-		font-size: 1em;
-	}
-	.input {
-		outline: none !important;
-		white-space: pre-wrap;
-		border-bottom: 1px solid #9e9e9e;
-		box-shadow: 0 2px 0 -1px #9e9e9e;
-		transition: all .3s ease-out;
-	}
-	.input:active, .input:focus {
-		border-bottom: 1px solid #8060E5;
-		box-shadow: 0 2px 0 -1px #8060E5;
-	}
-	.no-issues {
-		display: none;
-	}
-	.label {
-		background-color: #A9A9A9;
-		color: white;
-		padding: 0.2em 0.25em;
-		border-radius: 0.2em;
-	}
-	.label.label-nok {
-		background-color: #ce4037;
-	}
-	.label.label-ok {
-		background-color: #29a853;
-	}
-	.footer {
-		height: 56px;
-		background-color: #212121;
-		color: #fff;
-	}
-	.main {
-		margin-top: 64px;
-		margin-left: 8px;
-		margin-right: 8px;
-	}
-	.setting {
-		margin: 20px 0;
-	}
-	.row {
-		margin-bottom: 0;
-	}
-	.settingtitle {
-		font-family: Roboto;
-		font-size: 1.5em;
-	}
-	.settingtext {
-		color: #9e9e9e;
-		font-family: Roboto;
-		font-size: 1em;
-	}
-	.navtext {
-		font-size: 1.5em;
-		color: #fff;
-		display: inline-block;
-		font-weight: 500;
-	}
-	.header {
-		font-family: Roboto;
-		font-size: 1.2em;
-		font-weight: 400;
-		color: #009688;
-	}
-	.btn, .card-action > a {
-		font-family: Roboto;
-		font-size: 1em;
-	}
-	.toast {
-		font-family: Roboto;
-	}
-
-	.card-content div, .card-content li {
-		font-family: Roboto;
-		font-size: 1em;
-	}
-	.card .card-content {
-		padding-bottom: 48px;
-	}
-	nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-		height: 56px;
-		line-height: 56px;
-	}
-	</style>
+	<link rel="stylesheet" target="_blank" href="/css/popup.css"></link>
 </head>
 <body>
 	<nav style="background-color: #8060E5; position: fixed; top: 0; left: 0; z-index: 5;">
 		<div class="nav-wrapper">
-			<i class="mdi-navigation-arrow-back navtext" id="closepopup" style="display: inline; margin-left: 16px; font-size: 1.8em;"></i>
+			<i class="mdi-navigation-close navtext" id="close-popup" style="display: inline; margin-left: 16px; font-size: 1.8em; cursor: pointer;"></i>
 			<div style="position: absolute; left: 72px;" class="navtext">Alex</div>
+			<i class="mdi-navigation-more-vert navtext" data-activates='overflow-menu-dropdown' id="overflow-menu" style="display: inline; font-size: 1.8em; position: absolute; right: 16px; cursor: pointer;"></i>
 		</div>
 	</nav>
+	<!-- Overflow Menu Structure -->
+	<ul id='overflow-menu-dropdown' class='dropdown-content'>
+		<li><a target="_blank" class="waves-effect alex-text" href="https://github.com/danielhickman/Alex-Chrome-Extension">GitHub</a></li>
+		<li><a target="_blank" class="waves-effect alex-text" href="http://alexjs.com">AlexJS</a></li>
+		<li><a class="waves-effect alex-text" href="/html/licenses.html">Licenses</a></li>
+		<li class="divider"></li>
+		<li><a target="_blank" class="waves-effect alex-text" href="https://github.com/danielhickman">Developer</a></li>
+	</ul>
 	<div class="main">
-		<!-- <div class="header">Issues:</div> -->
 		<div class="card">
-			<div class="card-content grey-text text-darken-4">
-				<span class="card-title grey-text text-darken-4">Input</span>
+			<div class="card-content">
+				<span class="card-title">Input</span>
 				<div class="input" id="input" contenteditable="true">Enter text here or select text on the webpage and press Alex again.</div>
 			</div>
 		</div>
 
 
-		<!-- <div class="header">Issues:</div> -->
 		<div class="card">
-			<div class="card-content grey-text text-darken-4">
-				<span class="card-title grey-text text-darken-4">Issues</span>
+			<div class="card-content">
+				<span class="card-title">Issues</span>
 				<ol id="issues" class="issues"></ol>
 				<div id="no-issues" class="no-issues">
 					<code class="label label-ok">No issues!</code>
@@ -121,12 +41,9 @@
 		</div>
 	</div>
 
-
-	<!-- <div class="footer">Powered By <a href="http://alexjs.com/" target="_blank" title="Alex Website">Alex</a> | Extension by <a title="Daniel Hickman on GitHub" target="_blank" href="https://github.com/danielhickman/">Daniel Hickman</a></div> -->
-
 	<script src="/js/alex.js"></script>
-	<script src="/js/popup.js"></script>
 	<script src="/js/jquery.js"></script>
 	<script src="/js/materialize.js"></script>
+	<script src="/js/popup.js"></script>
 </body>
 </html>
