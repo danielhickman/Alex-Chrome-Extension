@@ -162,6 +162,7 @@ function onchange() {
 document.addEventListener('DOMContentLoaded', function () {
 		onchange();
 		inputEle.addEventListener("input", function() {onchange();}, false);
+		inputEle.focus();
 		document.getElementById('close-popup').addEventListener('click', function() {window.close()});
 		$('#overflow-menu').dropdown({
 			inDuration: 300,
