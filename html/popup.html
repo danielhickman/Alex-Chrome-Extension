@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Alex</title>
+	<meta charset="utf-8">
+	<title>alex</title>
 	<link rel="stylesheet" target="_blank" href="/css/materialize.css"></link>
-	<link rel="stylesheet" target="_blank" href="/css/popup.css"></link>
+	<link rel="stylesheet" target="_blank" href="/css/index.css"></link>
 </head>
 <body>
-	<nav style="background-color: #8060E5; position: fixed; top: 0; left: 0; z-index: 5;">
+	<nav>
 		<div class="nav-wrapper">
-			<i class="mdi-navigation-close navtext" id="close-popup" style="display: inline; margin-left: 16px; font-size: 1.8em; cursor: pointer;"></i>
-			<div style="position: absolute; left: 72px;" class="navtext">Alex</div>
-			<i class="mdi-navigation-more-vert navtext" data-activates='overflow-menu-dropdown' id="overflow-menu" style="display: inline; font-size: 1.8em; position: absolute; right: 16px; cursor: pointer;"></i>
+			<h1 class="navtitle">alex</h1>
+			<i class="navmore mdi-navigation-more-vert" data-activates='overflow-menu-dropdown' id="overflow-menu"></i>
+			<i class="navclose mdi-navigation-close" id="close-popup"></i>
 		</div>
 	</nav>
 	<!-- Overflow Menu Structure -->
@@ -22,23 +23,12 @@
 		<li><a target="_blank" class="waves-effect alex-text" href="https://github.com/danielhickman">Developer</a></li>
 	</ul>
 	<div class="main">
-		<div class="card">
-			<div class="card-content">
-				<span class="card-title">Input</span>
-				<div class="input" id="input" contenteditable="true">Enter text here or select text on the webpage and press Alex again.</div>
-			</div>
-		</div>
-
-
-		<div class="card">
-			<div class="card-content">
-				<span class="card-title">Issues</span>
-				<ol id="issues" class="issues"></ol>
-				<div id="no-issues" class="no-issues">
-					<code class="label label-ok">No issues!</code>
-				</div>
-			</div>
-		</div>
+		<div class="input" id="input" contenteditable="true" class="materialize-textarea">Enter text here or select text on the webpage and press alex again.</div>
+		<p class="issues-title">Issues</p>
+		<ol id="issues" class="issues"></ol>
+		<ol id="no-issues" class="issues">
+			<li class="issue"><code class="label label-ok">No issues!</code></li>
+		</ol>
 	</div>
 
 	<script src="/js/alex.js"></script>

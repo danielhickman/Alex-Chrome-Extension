@@ -1,0 +1,142 @@
+html {
+	width: 600px;
+	min-height: 300px;
+	line-height: 1.5;
+	font-weight: normal;
+	color: rgba(0,0,0,0.87);
+}
+body {
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+	font-size: 1em;
+}
+.main {
+	margin: 16px;
+}
+nav {
+	background-color: #8060E5;
+	box-shadow: none;
+	border-top-left-radius: 1px;
+	border-top-right-radius: 1px;
+	color: #fff;
+}
+.navtitle {
+	font-size: 1.5em;
+	font-weight: 300;
+	position: absolute;
+	margin: 0 16px;
+	line-height: 56px;
+}
+.navback + .navtitle {
+	top: 0;
+	left: 44px;
+}
+.navclose, .navmore, .navback {
+	cursor: pointer;
+	font-size: 1.8em;
+	width: 28px;
+}
+.navclose, .navmore {
+	top: 0;
+	position: absolute;
+}
+nav .nav-wrapper /* specificity */ .navback {
+	display: block;
+	margin-left: 16px;
+}
+.navmore {
+	right: 56px;
+}
+.navclose {
+	right: 14px;
+}
+#overflow-menu-dropdown {
+	margin-top: 8px;
+}
+.alex-text {
+	color: #8060E5 !important;
+}
+.input {
+	outline: none !important;
+	white-space: pre-wrap;
+	color: rgba(0, 0, 0, 0.87);
+	transition: border-bottom-color .3s ease-out;
+	border: 0 solid rgba(0, 0, 0, 0.12);
+	border-bottom-width: 1px;
+	padding-bottom: 1px;
+}
+.input:active, .input:focus {
+	border-bottom-color: #8060E5;
+	border-bottom-width: 2px;
+	padding-bottom: 0;
+}
+
+.label {
+	background-color: #A9A9A9;
+	color: white;
+	padding: 0.2em 0.25em;
+	border-radius: 0.2em;
+}
+.label.label-nok {
+	background-color: #ce4037;
+}
+.label.label-ok {
+	background-color: #29a853;
+}
+.issues, .issues-title {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.issue {
+	margin: 6px 0;
+	font-size: 14px;
+	line-height: 1.8;
+}
+#no-issues {
+	list-style: none;
+}
+
+/*
+ * Licenses.
+ */
+
+.header {
+	font-size: 1em;
+	color: rgba(0, 0, 0, 0.54);
+	margin: 16px 0;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.card-content div, .card-content li {
+	font-size: 1em;
+	line-height: 2;
+}
+
+.card-action {
+	width: 100%;
+}
+
+.card-action.right > a {
+	float: right;
+}
+
+.alex-button {
+	color: #8060E5 !important;
+}
+.alex-button:hover {
+	color: #8060E5 !important;
+}
+.card {
+	margin: 16px 0;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.137255) 0px 1px 1px 0px, rgba(0, 0, 0, 0.117647) 0px 2px 1px -1px;
+}
+.card /* specificity */ .card-title {
+	color: rgba(0,0,0,0.87);
+	line-height: 24px;
+	margin-bottom: 16px;
+	margin-top: 0;
+}
+.card /* specificity */ .card-content {
+	padding: 16px;
+}
