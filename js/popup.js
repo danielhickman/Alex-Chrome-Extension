@@ -111,7 +111,7 @@ function decorateMessage(message) {
 }
 
 function onchange() {
-	var value = document.getElementById("input").innerHTML.replace(/[\n\r]+/gi, "");
+	var value = (inputEle.textContent || inputEle.innerText).replace(/[\n\r]+/gi, " ");
 	var messages = undefined;
 	var message = undefined;
 	if (value !== previousValue) {
